@@ -1,0 +1,7 @@
+# PyTorch is intentionally NOT listed: install the right build for your machine (see README).
+opencv-python>=4.8
+numpy>=1.24
+PyYAML>=6.0
+streamlit>=1.40
+pandas>=2.0
+ultralytics==8.4.215

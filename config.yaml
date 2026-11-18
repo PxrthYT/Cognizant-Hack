@@ -1,0 +1,24 @@
+# Single place to tune the whole system.
+camera:
+  index: 0            # try 0, 1, 2... run `python tools/check_camera.py --list`
+  width: 640
+  height: 480
+  fps: 30
+  backend: auto       # auto | dshow (Windows) | avfoundation (Mac)
+
+detector:
+  type: segmenter     # segmenter | yolo
+  confidence: 0.35
+  model_path: models/pretrain.pt
+  device: auto        # auto | cpu | cuda | mps
+
+regions:              # fractions of frame width for left/centre/right steering
+  left_max: 0.33
+  right_min: 0.67
+  close_y: 0.75       # debris below this fraction of frame height = under the vacuum
+  obstacle_y: 0.55    # bottom of a potential obstacle enters the approach area
+
+control:
+  actuator: manual    # manual | relay
+  pulse_ms: 200
+  relay_port: COM3    # Mac example: /dev/tty.usbserial-XXXX

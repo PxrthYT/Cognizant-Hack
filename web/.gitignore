@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.tsbuildinfo
+# Required source data, also when cloned without the local hardware dataset.
+!src/data/
+!src/data/*.json
+*.local
